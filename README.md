@@ -25,6 +25,22 @@ There is also a [critical comparison of X11 and Wayland by probonopd](https://gi
 
 We appreciate your interest in contributing! Please refer to the [CONTRIBUTING document](CONTRIBUTING.md) for everything you need to get started. To report a bug, please use the sonic-win bug tracker at [Issues · Sonic-DE/sonic-win](https://github.com/Sonic-DE/sonic-win/issues).
 
+## Installing (Only termux)
+first, do pkg install cmake ninja git make pkg-config gettext \
+  qt6-qtbase qt6-qtdeclarative qt6-qtsvg qt6-qtsensors \
+  kf6-kconfig kf6-coreaddons kf6-windowsystem kf6-kcmutils \
+  libepoxy xcb-util-cursor libdrm mesa, then clone the repo, then mkdir build && cd build
+cmake .. \
+  -DCMAKE_INSTALL_PREFIX=$PREFIX \
+  -DCMAKE_PREFIX_PATH=$PREFIX \
+  -DANDROID=OFF \
+  -DCMAKE_SYSTEM_NAME=Linux \
+  -DKWIN_BUILD_SCREENLOCKER=OFF \
+  -DCMAKE_SHARED_LINKER_FLAGS="-L$PREFIX/lib -landroid-shmem" \
+  -DCMAKE_EXE_LINKER_FLAGS="-L$PREFIX/lib -landroid-shmem"
+, then when thats done, use make -j$(nproc) and make install, also be sure to remove kwin forcully and make kwin_x11 a empty package (ghost package) and then install this
+
+
 ## Getting in contact
 
 We'd love to hear from you on one of our channels. To get end-user support, please also check your distribution's chat or forum.
