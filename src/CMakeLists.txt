@@ -346,7 +346,7 @@ endif()
 
 if (KWIN_BUILD_SCREENLOCKER)
     target_sources(kwin PRIVATE screenlockerwatcher.cpp)
-    target_link_libraries(kwin PRIVATE PW::KScreenLocker)
+#    target_link_libraries(kwin PRIVATE PW::KScreenLocker)
 endif()
 
 if (KWIN_BUILD_TABBOX)

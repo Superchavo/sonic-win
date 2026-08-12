@@ -51,7 +51,7 @@ include(ECMDeprecationSettings)
 option(KWIN_BUILD_DECORATIONS "Enable building of KWin decorations." ON)
 option(KWIN_BUILD_KCMS "Enable building of KWin configuration modules." ON)
 option(KWIN_BUILD_NOTIFICATIONS "Enable building of KWin with knotifications support" ON)
-option(KWIN_BUILD_SCREENLOCKER "Enable building of KWin lockscreen functionality" ON)
+option(KWIN_BUILD_SCREENLOCKER "Enable building of KWin lockscreen functionality" OFF)
 option(KWIN_BUILD_TABBOX "Enable building of KWin Tabbox functionality" ON)
 option(KWIN_BUILD_RUNNERS "Enable building of KWin with krunner support" ON)
 option(KWIN_BUILD_NIGHTLIGHT "Enable building of KWin with nightlight support" ON)
@@ -339,7 +339,7 @@ endif()
 if (KWIN_BUILD_SCREENLOCKER)
     find_package(KScreenLocker CONFIG)
     set_package_properties(KScreenLocker PROPERTIES
-        TYPE REQUIRED
+        TYPE OPTIONAL
         PURPOSE "For screenlocker integration in KWin"
     )
 endif()
