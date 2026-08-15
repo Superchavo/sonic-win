@@ -1,4 +1,5 @@
 # sonic-win
+![https://raw.githubusercontent.com/Superchavo/sonic-win/refs/heads/master/logo.png](logo)
 
 ## KWin/X11 with ports from KWin/Wayland, bug fixes, and other improvements
 
