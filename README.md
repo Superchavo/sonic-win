@@ -1,5 +1,5 @@
-# sonic-win
-![https://raw.githubusercontent.com/Superchavo/sonic-win/refs/heads/master/logo.png](logo)
+# Sonic Win For termux
+![https://raw.githubusercontent.com/Superchavo/sonic-win/refs/heads/master/logo.png](https://raw.githubusercontent.com/Superchavo/sonic-win/refs/heads/master/logo.png)
 
 ## KWin/X11 with ports from KWin/Wayland, bug fixes, and other improvements
 
